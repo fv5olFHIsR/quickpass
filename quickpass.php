@@ -21,7 +21,7 @@ class QuickPass{
 		$linefor=preg_replace("/\s+/", "", $linefor);
 		fclose($handlefor);
 		clearStdin();
-		echo "Length (default 16): ";
+		echo "Length (default 24): ";
 		$handle = fopen ("php://stdin","r");
 		$line = fgets($handle);
 		$line=preg_replace("/\s+/", "", $line);
