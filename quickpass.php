@@ -6,7 +6,7 @@ class QuickPass{
 			for ($i = 0; $i < 50; $i++) echo "\r\n";
 		}
 		clearStdin();
-		function generateRandomString($length = 10) {
+		function generateRandomString($length = 24) {
 			$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 			$charactersLength = strlen($characters);
 			$randomString = '';
@@ -33,25 +33,19 @@ class QuickPass{
 		if((int)$line){
 			$passvar=generateRandomString((int)$line);
 			clearStdin();
-			echo "Generated pass: ".$passvar.PHP_EOL;
-			
+			echo "Generated pass: ".$passvar.PHP_EOL;	
 			echo PHP_EOL.PHP_EOL.PHP_EOL.PHP_EOL;
 			echo PHP_EOL.PHP_EOL.PHP_EOL.PHP_EOL;
-
 			exec('echo '.$passvar.'| clip');
 			echo "(Copied to clipboard)".PHP_EOL;
-
 			if(strlen($linefor)>0){
 				file_put_contents("Vault\\".$linefor.".pass",$passvar);
 				echo "(Saved to vault)".PHP_EOL;
 			}
-			
 			echo PHP_EOL."QuickPass by KiRiCh";
-			
 			$handlehalt = fopen ("php://stdin","r");
 			$linehalt = fgets($handlehalt);
 			fclose($handlehalt);
-			
 		}
 		else{
 			echo "ABORTING!\n";
