@@ -38,6 +38,9 @@ class QuickPass{
 			exec('echo '.$passvar.'| clip');
 			echo "(Copied to clipboard)".PHP_EOL;
 			if(strlen($linefor)>0){
+				if (!file_exists('Vault\\')) {
+					mkdir('Vault\\', 0777, true);
+				}
 				file_put_contents("Vault\\".$linefor.".pass",$passvar);
 				echo "(Saved to vault)".PHP_EOL;
 			}
