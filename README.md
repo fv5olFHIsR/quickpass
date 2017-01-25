@@ -1,6 +1,6 @@
 # quickpass
 A very small executable written in PHP and compiled for Windows with Phalanger. It generates passwords (or random strings) locally.
-The passwords can be saved to a .pass file if you enter a name (not at all required)
+The passwords can be saved to a .pass file if you enter a name (not at all required, but it is neat if you often generate passwords for different things)
 
 
 QuickPass by KiRiCh
