@@ -14,7 +14,7 @@ Advantages:
 
 - Incredibly simple - 50 lines of code, nothing up the developer's sleeve, can be reviewed in 2 min
 
-- Optionally save the pass to fa Vault/passname.pass file (if you enter a name)
+- Optionally save the pass to a Vault/passname.pass file (if you enter a name)
 
 - Super Fast - less than 2 seconds to have a fresh password in your clipboard!
 
