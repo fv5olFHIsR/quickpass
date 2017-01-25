@@ -9,7 +9,7 @@ Advantages:
 
 - Creates Strong Passwords of 24 chars by default
 
-- Passwords are NEVER sent over the newtwork
+- Passwords are NEVER sent over the network
 
 - Automatically copies the generated password to CLIPBOARD
 
