@@ -25,6 +25,6 @@ Usage:
 
 - If you are on Windows and have php you can also download quickpass.php and execute in cmd - c:\qp\php quickpass.php
 
-- If you are on anything else you have to use PHP to execute or compile for your target os with whatever, BUT MIND THE COPY TO CLIPBOARD EXEC it will not run, so modify accordidngly as well.
+- If you are on anything else you have to use PHP to execute or compile for your target os with whatever, BUT MIND THE COPY TO CLIPBOARD EXEC it will not run, so modify accordingly as well.
 
 If you see anything that feels wrong in the code, please let me know.
