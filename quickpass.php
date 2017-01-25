@@ -1,9 +1,9 @@
 <?php
 class QuickPass{
    public static function main(){
-		function clearStdin()
+		function clearStdin($height = 50)
 		{
-			for ($i = 0; $i < 50; $i++) echo "\r\n";
+			for ($i = 0; $i < $height; $i++) echo PHP_EOL;
 		}
 		clearStdin();
 		function generateRandomString($length = 24) {
@@ -34,8 +34,7 @@ class QuickPass{
 			$passvar=generateRandomString((int)$line);
 			clearStdin();
 			echo "Generated pass: ".$passvar.PHP_EOL;	
-			echo PHP_EOL.PHP_EOL.PHP_EOL.PHP_EOL;
-			echo PHP_EOL.PHP_EOL.PHP_EOL.PHP_EOL;
+			clearStdin(9);
 			exec('echo '.$passvar.'| clip');
 			echo "(Copied to clipboard)".PHP_EOL;
 			if(strlen($linefor)>0){
