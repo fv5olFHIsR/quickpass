@@ -6,7 +6,7 @@ class QuickPass{
 			for ($i = 0; $i < $height; $i++) echo PHP_EOL;
 		}
 		clearStdin();
-		function generateRandomString($length = 24) {
+		function generateRandomString($length = 22) {
 			$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 			$charactersLength = strlen($characters);
 			$randomString = '';
