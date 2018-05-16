@@ -29,3 +29,6 @@ Usage:
 - If you are on anything else you have to use PHP to execute or compile for your target os with whatever, BUT MIND THE COPY TO CLIPBOARD EXEC it will not run, so modify accordingly as well.
 
 If you see anything that feels wrong in the code, please let me know.
+
+
+This Branch commit has additional comments

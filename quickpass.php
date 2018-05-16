@@ -8,6 +8,7 @@ class QuickPass{
 		}
 		//Clear StdIn clears input buffer
 		clearStdin();
+		//Core String Generation
 		function generateRandomString($length = 22) {
 			$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 			$charactersLength = strlen($characters);
