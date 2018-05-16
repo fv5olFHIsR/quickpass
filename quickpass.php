@@ -1,14 +1,7 @@
 <?php
 class QuickPass{
    public static function main(){
-	   //Clear cmd window, dump 50 empty lines
-		function clearStdin($height = 50)
-		{
-			for ($i = 0; $i < $height; $i++) echo PHP_EOL;
-		}
-		//Clear StdIn clears input buffer
-		clearStdin();
-		//Core String Generation
+		function clearStdin($height = 50){ for ($i = 0; $i < $height; $i++) echo PHP_EOL; } clearStdin();
 		function generateRandomString($length = 22) {
 			$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 			$charactersLength = strlen($characters);
@@ -17,10 +10,8 @@ class QuickPass{
 				$randomString .= $characters[rand(0, $charactersLength - 1)];
 			}
 			return $randomString;
-		}		
-		//Collect for, to possibly store 
+		}
 		echo "For (optional): ";
-		//Stdin fopen
 		$handlefor = fopen ("php://stdin","r");
 		$linefor = fgets($handlefor);
 		$linefor=preg_replace("/\s+/", "", $linefor);
@@ -32,9 +23,7 @@ class QuickPass{
 		$line=preg_replace("/\s+/", "", $line);
 		fclose($handle);
 		clearStdin();
-		if((int)$line==0){
-			$line=24;
-		}
+		if((int)$line==0){$line=24;}
 		if((int)$line){
 			$passvar=generateRandomString((int)$line);
 			clearStdin();
@@ -49,16 +38,12 @@ class QuickPass{
 				file_put_contents("Vault\\".$linefor.".pass",$passvar);
 				echo "(Saved to vault)".PHP_EOL;
 			}
-			echo PHP_EOL."QuickPass by KiRiCh. v1";
+			echo PHP_EOL."QuickPass by KiRiCh";
 			$handlehalt = fopen ("php://stdin","r");
 			$linehalt = fgets($handlehalt);
 			fclose($handlehalt);
 		}
-		else{
-			echo "ABORTING!\n";
-			exit;
-		}
+		else{ echo "ABORTING!\n";	exit; }
    }
 }
 QuickPass::main();
-?>
