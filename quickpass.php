@@ -49,7 +49,7 @@ class QuickPass{
 				file_put_contents("Vault\\".$linefor.".pass",$passvar);
 				echo "(Saved to vault)".PHP_EOL;
 			}
-			echo PHP_EOL."QuickPass by KiRiCh";
+			echo PHP_EOL."QuickPass by KiRiCh. v1";
 			$handlehalt = fopen ("php://stdin","r");
 			$linehalt = fgets($handlehalt);
 			fclose($handlehalt);
