@@ -18,7 +18,9 @@ class QuickPass{
 			}
 			return $randomString;
 		}		
+		//Collect for, to possibly store 
 		echo "For (optional): ";
+		//Stdin fopen
 		$handlefor = fopen ("php://stdin","r");
 		$linefor = fgets($handlefor);
 		$linefor=preg_replace("/\s+/", "", $linefor);
